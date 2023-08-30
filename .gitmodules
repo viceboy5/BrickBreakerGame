@@ -1,0 +1,3 @@
+[submodule "BrickBreaker/Assets/Scripts/ScriptLibrary"]
+	path = BrickBreaker/Assets/Scripts/ScriptLibrary
+	url = https://github.com/viceboy5/ScriptLibrary
