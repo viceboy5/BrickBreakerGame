@@ -6,17 +6,16 @@ using UnityEngine;
 public class BallMovementBehaviour : MonoBehaviour
 {
     private Rigidbody rigidbody;
-    public FloatData speed;
+    public float speed;
     
     
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
-        Debug.Log(rigidbody);
     }
     
     public void SetVelocity()
     {
-        rigidbody.AddForce(Vector3.forward * Time.deltaTime * speed.value);
+        rigidbody.AddForce(Vector3.forward * Time.deltaTime * speed *100);
     }
 }
