@@ -17,6 +17,7 @@ public class PaddleMovementBehaviour : MonoBehaviour
     public IEnumerator OnMouseDown()
     {
         offset = transform.position - cameraObj.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraObj.transform.position.y));
+        offset.z = 0f;
         draggable = true;
         startDragEvent.Invoke();
         yield return new WaitForFixedUpdate();
@@ -25,6 +26,7 @@ public class PaddleMovementBehaviour : MonoBehaviour
         {
             yield return new WaitForFixedUpdate();
             position = cameraObj.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraObj.transform.position.y)) + offset;
+            position.z = transform.position.z;
             transform.position = position;
         }
     }
