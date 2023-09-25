@@ -139,11 +139,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 0.1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!135 &30626
 SphereCollider:
@@ -170,40 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd7dcee583e407469952d5cbe49d16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
---- !u!114 &30628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7fcb6bf01fafe942929a828ccda7ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 30627}
-        m_TargetAssemblyTypeName: BallMovementBehaviour, Assembly-CSharp
-        m_MethodName: SetVelocity
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  awakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  disableEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  speed: 150
 --- !u!1 &46760682 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2427fba2c4f60d64a9c013380041bda8,
@@ -353,7 +320,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a171336235cbacc42b0ce65e3f6eb77c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.36
+      value: 1.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a171336235cbacc42b0ce65e3f6eb77c,
         type: 3}
