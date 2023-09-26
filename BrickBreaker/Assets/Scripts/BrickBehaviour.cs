@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class BrickBehaviour : MonoBehaviour
 {
     public int health;
-    public UnityEvent zeroHealth;
+    public UnityEvent zeroHealth, startEvent;
     private MeshRenderer renderer;
 
     private void Awake()
@@ -13,6 +13,10 @@ public class BrickBehaviour : MonoBehaviour
         renderer = GetComponent<MeshRenderer>();
     }
 
+    private void Start()
+    {
+        startEvent.Invoke();
+    }
 
     public void UpdateHealth(int number)
     {
@@ -28,8 +32,8 @@ public class BrickBehaviour : MonoBehaviour
     }
     
     
-    public void ColorChange(Material newMat)
+    public void ColorChange(MatDataList matList)
     {
-        renderer.material = newMat;
+        renderer.material = matList.currentMat.mat;
     }
 }

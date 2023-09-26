@@ -612,14 +612,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 62acc50d5cfc5b1459e45abfba6ecceb, type: 2}
+        m_TargetAssemblyTypeName: MatDataList, Assembly-CSharp
+        m_MethodName: SetNewMaterialSequential
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 829416234}
         m_TargetAssemblyTypeName: BrickBehaviour, Assembly-CSharp
         m_MethodName: ColorChange
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 7ad67ad558319414480eb3a213403852,
+          m_ObjectArgument: {fileID: 11400000, guid: 62acc50d5cfc5b1459e45abfba6ecceb,
             type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: MatDataList, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -637,7 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c60a56e7b69244da5f6705fdec691a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 4
   zeroHealth:
     m_PersistentCalls:
       m_Calls:
@@ -645,6 +657,21 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 62acc50d5cfc5b1459e45abfba6ecceb, type: 2}
+        m_TargetAssemblyTypeName: MatDataList, Assembly-CSharp
+        m_MethodName: SetCurrentMaterialRandomly
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

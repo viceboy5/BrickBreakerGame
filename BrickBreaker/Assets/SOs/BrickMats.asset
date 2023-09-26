@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 938e3e2e10758614ba89cdb449ea4486, type: 3}
+  m_Name: BrickMats
+  m_EditorClassIdentifier: 
+  MatList:
+  - {fileID: 11400000, guid: 509cdbde2d512d7468354f50aae3fcaa, type: 2}
+  - {fileID: 11400000, guid: 9a829d5d4f908aa468ea2292c1cfe26d, type: 2}
+  - {fileID: 11400000, guid: c146dfb7e7ebec14f88db61ee7b63cc3, type: 2}
+  - {fileID: 11400000, guid: 30e4bb05e15237b47ab66457a8776b82, type: 2}
+  currentMat: {fileID: 11400000, guid: 30e4bb05e15237b47ab66457a8776b82, type: 2}
