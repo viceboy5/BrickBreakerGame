@@ -23,6 +23,11 @@ public class BrickBehaviour : MonoBehaviour
     public void UpdateHealth(int num)
     {
         health += num;
+        if (health != 0)
+        {
+            currentMat = matList.MatList[health -1];
+            renderer.material = currentMat.mat;
+        }
     }
 
     public void SetInitialHealthRandomly()
