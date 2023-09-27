@@ -26,4 +26,10 @@ public class BallMovementBehaviour : MonoBehaviour
         force.z = -1f;
         rigidbody.AddForce(force.normalized * Time.deltaTime * speed * 100);
     }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        Vector3 randomDirection = new Vector3(Random.Range(-.1f, .1f), 0f, Random.Range(-.1f, .1f)).normalized;
+        rigidbody.AddForce(randomDirection.normalized, ForceMode.VelocityChange);
+    }
 }
