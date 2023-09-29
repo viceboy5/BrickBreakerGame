@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 public class BallMovementBehaviour : MonoBehaviour
 {
     private Rigidbody rigidbody;
-    public float speed;
+    public float speed, bounceVariety;
     private Vector3 force = Vector3.zero;
     
     
@@ -27,9 +27,9 @@ public class BallMovementBehaviour : MonoBehaviour
         rigidbody.AddForce(force.normalized * Time.deltaTime * speed * 100);
     }
     
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        Vector3 randomDirection = new Vector3(Random.Range(-.1f, .1f), 0f, Random.Range(-.1f, .1f)).normalized;
+        Vector3 randomDirection = new Vector3(0f, 0f, Random.Range(-bounceVariety, bounceVariety)).normalized;
         rigidbody.AddForce(randomDirection.normalized, ForceMode.VelocityChange);
     }
 }

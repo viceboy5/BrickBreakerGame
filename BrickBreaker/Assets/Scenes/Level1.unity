@@ -170,7 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd7dcee583e407469952d5cbe49d16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
+  speed: 200
+  bounceVariety: 0.3
 --- !u!1 &46760682 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2427fba2c4f60d64a9c013380041bda8,
