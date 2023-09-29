@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody))]
-public class BallMovementBehaviour : MonoBehaviour
+public class BallBehaviour : MonoBehaviour
 {
     private Rigidbody rigidbody;
     public float speed, bounceVariety;
     private Vector3 force = Vector3.zero;
+    public IntData health;
+    public UnityEvent zeroHealth;
     
     
     private void Awake()
@@ -31,5 +34,14 @@ public class BallMovementBehaviour : MonoBehaviour
     {
         Vector3 randomDirection = new Vector3(0f, 0f, Random.Range(-bounceVariety, bounceVariety)).normalized;
         rigidbody.AddForce(randomDirection.normalized, ForceMode.VelocityChange);
+    }
+
+    public void CheckForZeroHealth(int healthMin)
+    {
+        if (health.value == healthMin)
+        {
+            zeroHealth.Invoke();
+        }
+        
     }
 }
