@@ -7,6 +7,7 @@ public class BallBehaviour : MonoBehaviour
 {
     private Rigidbody rigidbody;
     public float speed, bounceVariety;
+    public int healthMin;
     private Vector3 force = Vector3.zero;
     public IntData health;
     public UnityEvent zeroHealth;
@@ -36,11 +37,12 @@ public class BallBehaviour : MonoBehaviour
         rigidbody.AddForce(randomDirection.normalized, ForceMode.VelocityChange);
     }
 
-    public void CheckForZeroHealth(int healthMin)
+    public void CheckForZeroHealth()
     {
         if (health.value == healthMin)
         {
             zeroHealth.Invoke();
+            Debug.Log("you died");
         }
         
     }
